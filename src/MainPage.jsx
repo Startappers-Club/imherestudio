@@ -10,10 +10,9 @@ export default function MainPage() {
 
   return (
     <>
-        <Header setShowState={setShowState} showState={showState} />
-        <MainContainer setShowState={setShowState} showState={showState} />
+        <Header />
+        <MainContainer />
         <Footer setShowState={setShowState} showState={showState} />
-        {/* {!showState ? <Form setShowState={setShowState} showState={showState} /> : ''} */}
     </>
   );
 }

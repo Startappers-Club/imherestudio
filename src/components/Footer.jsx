@@ -1,25 +1,26 @@
-import { faEnvelope, faPhone, faC } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 import '../styles/Footer.css';
+import { faTelegramPlane , faWhatsappSquare} from '@fortawesome/free-brands-svg-icons'
+import {Link} from 'react-router-dom'
 
 
-export default function Footer( { showState, setShowState }) {
+export default function Footer() {
     return (
         <footer>
             <div className="footerItems">
                 <div className="footerLeftContents">
-                    <button onClick={ () => setShowState(!showState) }><FontAwesomeIcon icon={faEnvelope} className="icons" /></button>
-                    <p>vk</p>
-                </div>
-                <div className="footerRightContents">
-                    <button><FontAwesomeIcon icon={faPhone} className="icons phone" /></button>
-                    <p>1234567890</p>
+                    <p>imherestudio</p>
+                    <p>Copyright © 2022</p>
+                    <p>ИП Скареднова</p>
+                    <p>Ксения Олеговна</p>
                 </div>
             </div>
             <div className="footerRegistration">
-                <p><FontAwesomeIcon icon={ faC } /></p>
+                <Link to="/" className="socialNetwork"><FontAwesomeIcon className="telegram social_icons" icon={ faTelegramPlane } /></Link>
+                <Link to="/" className="socialNetwork"><FontAwesomeIcon className="whatsapp social_icons" icon={ faWhatsappSquare } /></Link>
+                <p>8 (906) 260-16-16</p>
             </div>
         </footer>
     );

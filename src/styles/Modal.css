@@ -1,0 +1,42 @@
+.help_modal {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    background-color: black;
+    width: 364px;
+    height: 408px;
+    border-radius: 20px;
+}
+
+
+.dialog_menu {
+    width: 334px;
+    height: 320px;
+    background-color: rgb(131, 131, 131);
+    border-radius: 12px;
+}
+
+
+
+.modal-header {
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0px;
+}
+
+.modal .closeModal {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+.modal .xmark_icon {
+    font-size: 36px;
+}
+
+
+
+

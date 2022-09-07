@@ -1,0 +1,91 @@
+.content .location {
+    background-color: rgb(20, 190, 246);
+    box-shadow: 1px 10px 2px rgb(9, 109, 180);
+    border: none;
+    margin: 20px auto;
+    padding: 12px 14px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.background_userInfo {
+    width: 100%;
+    height: max-content;
+}
+
+.modal-content {
+    background-color: rgb(51, 50, 50);
+    position: relative;
+    padding: 22px;
+    border-radius: 26px;
+}
+
+.modal-content .close_menu-User_info {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+
+.userInfoModal img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.userInfoModal .userPhoto_modal {
+    z-index: 99;
+    border: none;
+    font-size: 34px;
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+}
+
+.close_menu-User_info {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 12px 0 0;
+}
+
+
+.carousel {
+    display: flex;
+    padding: 12px 14px;
+    justify-content: center;
+}
+
+.carousel .left {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 55px;
+    margin-top: -13px;
+    color: rgb(141, 141, 141);
+}
+
+.carousel .usersData {
+    background-color: rgb(201, 198, 198);
+    border-radius: 12px;
+    padding: 12px 16px;
+    width: 200px;
+    height: 53px;
+    text-align: center;
+    border-radius: 26px;
+}
+
+.userInfoModal .ok {
+    padding: 22px 33px;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    width: 130px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 25px;
+    margin: 0px auto 30px;
+    border: 2px solid silver;
+}

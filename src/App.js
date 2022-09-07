@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 
 import './App.css';
 import MainPage from './MainPage';
+import BasePhotos from './components/BasePhotos';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<MainPage />} />
+        <Route path="/base/:id" element={ <BasePhotos /> } />
       </Routes>
     </div>
   );

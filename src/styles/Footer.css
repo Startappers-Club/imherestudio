@@ -1,11 +1,10 @@
 footer {
     width: 100%;
     height: auto;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(67, 67, 67);
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
-    overflow-x: hidden;
 }
 
 footer .footerItems {
@@ -19,81 +18,68 @@ footer .footerItems button {
 }
 
 footer .footerItems .footerLeftContents {
-    margin: 0 40px;
     display: flex;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
+    flex-direction: column;
 }
 
-footer .footerItems p, .footerItems .footerLeftContents {
-    margin-top: 18px;
+footer .footerItems .footerLeftContents p {
+    margin: 0;
 }
+
 
 .footerItems div button {
     margin: 0 5px;
-}
-
-footer .footerItems .icons {
-    font-size: 26px;
-    color: red;
 }
 
 footer .footerItems .phone {
     color: white;
 }
 
-footer .footerItems button {
-    background-color: transparent;
-    color: white;
+.socialNetwork .telegram, .socialNetwork .whatsapp {
+    font-size: 35px;
 }
 
+.socialNetwork .telegram {
+    margin-right: 14px;
+    color: rgb(41, 143, 245);
+} 
+
+.socialNetwork .whatsapp {
+    margin-right: 30px;
+    color: rgb(57, 207, 40);
+
+}
+
+.footerRegistration p {
+    color: white;
+}
 
 footer .footerRightContents {
     display: flex;
 }
 
-
-footer .footerRegistration {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    border: 5px solid silver;
-    margin: 20px 0 12px;
-}
-
-footer .footerRegistration p {
-    color: white;
-    font-weight: bold;
-    padding: 1px 14px;
-    font-size: 32px;
+.footerRegistration {
+    display: flex;
+    margin-top: 30px;
 }
 
 
 @media (max-width: 480px) {
-    footer .footerItems, footer {
+    footer {
         display: flex;
         flex-direction: column;
+        margin: auto;
     }
 
-    footer .footerItems, footer .footerRegistration {
-        margin: auto;
+    .footerRegistration {
+
     }
 
     footer .footerItems p {
         font-size: 20px;
     }
 
-    footer .footerRegistration {
-        width: 40px;
-        height: 40px;
-        margin-top: 20px;
-    }
 
-    footer .footerRegistration p {
-        font-size: 22px;
-        padding: 0px 8px;
-    }
 }
 
 
