@@ -16,6 +16,7 @@
 .background_userInfo {
     width: 100%;
     height: max-content;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, .8);
 }
 
 .modal-content {
@@ -29,6 +30,10 @@
     position: absolute;
     top: 20px;
     right: 10px;
+}
+
+.modal-content .userInfoModal img {
+    border: 2px solid silver;
 }
 
 
@@ -72,6 +77,7 @@
     border-radius: 12px;
     padding: 12px 16px;
     width: 200px;
+    border: 2px solid silver;
     height: 53px;
     text-align: center;
     border-radius: 26px;
@@ -79,13 +85,15 @@
 
 .userInfoModal .ok {
     padding: 22px 33px;
+    background-color: rgb(20, 190, 246);
+    box-shadow: 1px 10px 2px rgb(9, 109, 180);
     text-decoration: none;
-    color: black;
-    background-color: #fff;
+    color: white;
     width: 130px;
     text-align: center;
     font-size: 22px;
     border-radius: 25px;
     margin: 0px auto 30px;
     border: 2px solid silver;
+    font-weight: bold;
 }
