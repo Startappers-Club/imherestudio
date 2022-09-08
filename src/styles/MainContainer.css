@@ -17,7 +17,7 @@
 
 
 .wrapper .content {
-    margin: 10px 0px;
+    margin: 20px 0px;
     position: relative;
 }
 
@@ -28,7 +28,6 @@
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-        /* overflow-x: hidden; */
     }
 }
 
@@ -39,5 +38,4 @@
         justify-content: center;
         align-items: center;
     }
-    
 }

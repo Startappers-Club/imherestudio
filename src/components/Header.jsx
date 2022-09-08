@@ -1,10 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faCircleXmark, faHouse, faQuestion, faUser } from "@fortawesome/free-solid-svg-icons";
-
+import {
+      faCircleXmark,
+      faHouse,
+      faQuestion,
+      faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../assets/logo.png";
 
@@ -13,10 +17,13 @@ import "../styles/Header.css";
 import "../styles/Modal.css";
 
 
-
 export default function Header() {
-      const [ showState, setShowState ] = useState(false);
+      const [showState, setShowState] = useState(false);
       console.log(showState);
+      
+      const showToUserHelpModal = () => {
+            return setShowState(!showState)
+      }
 
       return (
             <>
@@ -25,51 +32,48 @@ export default function Header() {
                               <Link className="navbar-brand text-white" to="/">
                                     <FontAwesomeIcon icon={faHouse} className="icons" />
                               </Link>
-                              <Link to="/" className='text-white'>
-                                    <img className='logo' src={ logo } alt="I am here" />
+                              <Link to="/" className="text-white">
+                                    <img className="logo" src={logo} alt="I am here" />
                               </Link>
-                              <div className='right_part__header'>
-                                    <Link to="/"><FontAwesomeIcon icon={faUser} className="user icons" /></Link>
-                                    <div className='icon_item'>
-                                          <button  type="button" data-toggle="modal" data-target="#exampleModalLong" onClick={ () => setShowState(!showState) }>
-                                                <FontAwesomeIcon icon={ faQuestion } className="question_mark" />
+                              <div className="right_part__header">
+                                    <Link to="/">
+                                          <FontAwesomeIcon icon={faUser} className="user icons" />
+                                    </Link>
+                                    <div className="icon_item">
+                                          <button
+                                                onClick={showToUserHelpModal}
+                                                data-toggle="modal"
+                                                type="button" data-target="#exampleModalCenter"
+                                          >
+                                                <FontAwesomeIcon icon={faQuestion} className="question_mark" />
                                           </button>
                                     </div>
                               </div>
                         </div>
                   </nav>
                   {showState ? (
-                        <div onClick={ () => setShowState(!showState) } className="help_modal modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                              <div className="dialog_menu modal-dialog" role="document">
-                                    <div className="modalContent modal-content">
-                                          <div className="modal-header">
-                                                <button onClick={ () => setShowState(!showState) } type="button" className="close closeModal" data-dismiss="modal" aria-label="Close">
-                                                <FontAwesomeIcon className='xmark_icon' icon={faCircleXmark} />
-                                                </button>
+                        <div className="header_modal modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                        >
+                              <div className="modal-dialog modal-dialog-centered" role="document">
+                                    <div className="header-modal_content modal-content">
+                                          <div className="modal-content_border">
+                                                <div className="close_menu-User_info">
+                                                      <button type="button" data-dismiss="modal"                             className='userPhoto_modal'><FontAwesomeIcon icon={faCircleXmark}
+                                                      onClick={ showToUserHelpModal } /></button>
+                                                </div>
+                                                <div className="modal-content_inside">
+                                                      <div className="modal-text modal-body">
+                                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum saepe aperiam cupiditate voluptate beatae, facilis, libero et accusantium expedita neque atque illum officia cum porro reiciendis odit sunt? Ex, earum?
+                                                      </div>
+                                                </div>
                                           </div>
                                     </div>
                               </div>
                         </div>
-                  ) : ""}
+                  ) : (
+                        null
+                  )}
             </>
       );
 }
 
-
-
-
-/**
- * 
- * 
- * <div  onClick={ () => setShowState(!showState) } className="help_modal modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                              <div className="dialog_menu modal-dialog" role="document">
-                                    <div className="modalContent modal-content">
-                                          <div className="modal-header">
-                                                <button onClick={ () => setShowState(!showState) } type="button" className="close closeModal" data-dismiss="modal" aria-label="Close">
-                                                <FontAwesomeIcon className='xmark_icon' icon={faCircleXmark} />
-                                                </button>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
- */

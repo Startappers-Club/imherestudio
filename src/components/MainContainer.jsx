@@ -26,7 +26,7 @@ export default function MainContainer() {
                 <div className="row justify-content-center justify-content-md-center align-items-center">
                         {userInfoList.map(users => (
                             <div key={users.id} className="col-lg-4 col-md-6 container_item">
-                                <UserInfo {...users}  />
+                                <UserInfo { ...users }  />
                             </div>
                         ))}
                 </div>

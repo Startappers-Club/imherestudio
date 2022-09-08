@@ -52,8 +52,41 @@
     font-size: 24px;
 }
 
-.modalContent {
+.header-modal_content {
+    border: 2px solid rgb(153, 153, 153);
+}
+
+.header_modal .userPhoto_modal {
+    z-index: 99;
+    border: none;
+    font-size: 34px;
+    color: rgb(255, 0, 0);
     background-color: transparent;
 }
 
+.close_menu-User_info {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 12px 0 0;
+}
 
+.header-modal_content {
+    height: 400px;
+}
+
+.modal-content_border {
+    border: 1px solid silver;
+    height: 300px;
+    border-radius: 22px;
+    margin-top: -10px;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+
+.modal-text {
+    color: white;
+    padding: 15px 16px;
+    margin: 10px 0;
+    width: 100%;
+}

@@ -13,10 +13,13 @@
     justify-content: center;
 }
 
+.content {
+}
+
 .background_userInfo {
     width: 100%;
-    height: max-content;
-    box-shadow: 12px 12px 10px rgba(0, 0, 0, .8);
+    height: auto;
+    box-shadow: 12px 15px 13px -3px rgba(0, 0, 0, 0.8)!important;
 }
 
 .modal-content {
@@ -24,12 +27,13 @@
     position: relative;
     padding: 22px;
     border-radius: 26px;
+    border: 1px solid silver;
 }
 
 .modal-content .close_menu-User_info {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 14px;
+    right: 7px;
 }
 
 .modal-content .userInfoModal img {

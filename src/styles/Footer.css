@@ -2,9 +2,13 @@ footer {
     width: 100%;
     height: auto;
     background-color: rgb(67, 67, 67);
+    padding: 20px 30px;
+    border-top: 5px solid rgb(45, 42, 42);
+}
+
+footer .container {
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px;
 }
 
 footer .footerItems {
@@ -22,8 +26,14 @@ footer .footerItems .footerLeftContents {
     flex-direction: column;
 }
 
+footer .footerItems .footerLeftContents .imherestudio {
+    font-size: 22px;
+    font-weight: bold;
+}
+
 footer .footerItems .footerLeftContents p {
     margin: 0;
+    color: rgb(167, 167, 167);
 }
 
 
