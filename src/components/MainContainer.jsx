@@ -67,9 +67,9 @@ export default function MainContainer() {
                                         <img src={ selectedItem?.img || '' } alt="" />
                                     </div>
                                     <div className="carousel">
-                                        <button className="left" onClick={prevSlide}><FontAwesomeIcon icon={ faChevronLeft } /></button>
+                                        <button className="left"><FontAwesomeIcon icon={ faChevronLeft } /></button>
                                         <div className="usersData">data <span>{ selectedItem?.id }</span></div>
-                                        <button className="left" onClick={nextSlide}><FontAwesomeIcon icon={ faChevronRight } /></button>
+                                        <button className="left"><FontAwesomeIcon icon={ faChevronRight } /></button>
                                     </div>
                                     <Link to={ `base/${selectedItem?.id}` } className="ok">OK</Link>
                                 </div>
