@@ -16,16 +16,49 @@ import img_5 from "../assets/images/5.jpg";
 
 export default function MainContainer() {
     const userInfoList = [
-        { id: 1, name: "Norway Park: Барвиха", img: img_1 },
-        { id: 2, name: "Norway Park: Красногорск", img: img_2 },
-        { id: 3, name: "Norway Park: Мега Дыбенко", img: img_3 },
-        { id: 4, name: "Мадагаскар Junior", img: img_4 },
-        { id: 5, name: "ГудЛандия: Жуковский", img: img_5 }
+        { id: 1, name: "Norway Park: Барвиха", img: img_1, data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ] },
+        { id: 2, name: "Norway Park: Красногорск", img: img_2 ,  data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ] },
+        { id: 3, name: "Norway Park: Мега Дыбенко", img: img_3 ,  data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ] },
+        { id: 4, name: "Мадагаскар Junior", img: img_4 ,  data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ] },
+        { id: 5, name: "ГудЛандия: Жуковский", img: img_5,  data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ]  }
     ];
+
+
 
     const [showModal, setShowModal] = useState(false);
     const [selectedItemId, setSelectedItemId] = useState()
     const [selectedItem, setSelectedItem] = useState({})
+    const [dataIndex, setDataIndex] = useState(0)
 
     // get current modal data
     useEffect(() => {
@@ -34,19 +67,19 @@ export default function MainContainer() {
 
     // change to next slide
     const nextSlide = () => {
-        if (selectedItemId !== userInfoList?.length) {
-            setSelectedItemId(selectedItemId + 1)
+        if (dataIndex !== selectedItem?.data?.length - 1) {
+            setDataIndex(dataIndex + 1)
         } else {
-            setSelectedItemId(1)
+            setDataIndex(1)
         }
     }
 
     // change to previous slide
     const prevSlide = () => {
-        if (selectedItemId !== 1) {
-            setSelectedItemId(selectedItemId - 1)
+        if (dataIndex !== 0) {
+            setDataIndex(dataIndex - 1)
         } else {
-            setSelectedItemId(userInfoList?.length)
+            setDataIndex(selectedItem?.data?.length - 1)
         }
     }
 
@@ -67,10 +100,10 @@ export default function MainContainer() {
                                     </div>
                                     <div className="carousel">
                                         <button className="left" onClick={prevSlide}><FontAwesomeIcon icon={ faChevronLeft } /></button>
-                                        <div className="usersData">data <span>{ selectedItem?.id }</span></div>
+                                        <div className="usersData"><span>{ selectedItem?.data[dataIndex].date }</span></div>
                                         <button className="left" onClick={nextSlide}><FontAwesomeIcon icon={ faChevronRight } /></button>
                                     </div>
-                                    <Link to={ `base/${selectedItem?.id}` } className="ok">OK</Link>
+                                    <Link to={ `base/${selectedItem?.data[dataIndex].link}` } className="ok">OK</Link>
                                 </div>
                             </div>
                         </div>
