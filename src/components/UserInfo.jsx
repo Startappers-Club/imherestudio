@@ -8,12 +8,10 @@ import "../styles/UserInfo.css";
 
 export default function UserInfo(props) {
     const [showModal, setShowModal] = useState(false);
-    const [ activeModal, setActiveModal ] = useState(0);
 
 
     const showUserMessage = () => {
         setShowModal(!showModal);
-        setActiveModal(props.id);
     }
 
 
@@ -21,16 +19,14 @@ export default function UserInfo(props) {
         <>
             {showModal ? (
                 <>
-                    {activeModal === props.id ? (
-                        <div className="userInfoModal modal fade" tabIndex="-1" role="dialog" id="userInfoModal"    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="userInfoModal modal fade" tabIndex="-1" role="dialog" id="userInfoModal"    aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className='close_menu-User_info'>
                                     <button  type="button" data-dismiss="modal" className='userPhoto_modal'><FontAwesomeIcon icon={faCircleXmark} /></button>
                                 </div>
                                 <div className="userInfoModal modal-body">
-{                                console.log(props.img) }
-                                    <img src={props.img} alt={ props.id } />
+                                    <p>Укажите дату посещения</p>
                                 </div>
                                    <div className="carousel">
                                     <button className="left"><FontAwesomeIcon icon={ faChevronLeft } /></button>
@@ -41,8 +37,6 @@ export default function UserInfo(props) {
                             </div>
                         </div>
                     </div>
-                    ) : null}
-                    
                 </>
             ) : ""}
 
