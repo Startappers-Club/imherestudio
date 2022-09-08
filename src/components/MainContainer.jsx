@@ -1,8 +1,7 @@
-import "../styles/MainContainer.css";
+import { Link } from 'react-router-dom';
 import { faChevronLeft, faChevronRight, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import UserInfo from "./UserInfo";
 
@@ -12,6 +11,7 @@ import img_3 from "../assets/images/3.jpg";
 import img_4 from "../assets/images/4.jpg";
 import img_5 from "../assets/images/5.jpg";
 
+import "../styles/MainContainer.css";
 
 
 export default function MainContainer() {
@@ -29,7 +29,9 @@ export default function MainContainer() {
 
     // get current modal data
     useEffect(() => {
-        setSelectedItem(userInfoList.find(item => item.id === selectedItemId))
+        setSelectedItem(userInfoList.find(item => item.id === selectedItemId));
+
+        // eslint-disable-next-line
     }, [selectedItemId]);
 
     // change to next slide
@@ -62,7 +64,6 @@ export default function MainContainer() {
                                         <button type="button" data-dismiss="modal" className='userPhoto_modal'><FontAwesomeIcon icon={ faCircleXmark } /></button>
                                     </div>
                                     <div className="userInfoModal modal-body">
-                                        <p>Укажите дату посещения</p>
                                         <img src={ selectedItem?.img || '' } alt="" />
                                     </div>
                                     <div className="carousel">
