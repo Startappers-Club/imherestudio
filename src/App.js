@@ -19,6 +19,7 @@ function App() {
         families: ['Roboto']
       }
     });
+    document.title = "I`M HERE.studio";
   }, []);
 
 

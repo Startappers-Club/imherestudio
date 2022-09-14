@@ -5,6 +5,13 @@
     position: relative;
 }
 
+.wrapper .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 0fr; 
+    gap: 20px 0px;
+}
+
 .wrapper button.location {
     width: 250px;
     border: 2px solid rgb(48, 48, 48);
@@ -15,27 +22,58 @@
 }
 
 
-
-.wrapper .content {
-    margin: 20px 0px;
-    position: relative;
+.userInfoModal .ok {
+    padding: 22px 33px;
+    background-color: rgb(81, 81, 81);
+    text-decoration: none;
+    color: rgb(214, 208, 208);
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 12px;
+    margin: 0px auto 30px;
+    font-weight: 600;
 }
 
 
 
 
-@media (max-width: 1000px) {
-    .wrapper {
-        display: flex;
-        flex-wrap: wrap;
+@media (max-width: 972px) {
+    .wrapper .row {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 1fr 1fr 0fr;
+        gap: 20px 0px;
     }
 }
 
 
 @media (max-width: 767px) {
-    .container_item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .content .user_name {
+        font-size: 17px;
     }
 }
+
+
+@media (max-width: 500px) {
+    .wrapper .row {
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-rows: 1fr 1fr 0fr;
+        gap: 20px 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
