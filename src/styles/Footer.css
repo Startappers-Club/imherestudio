@@ -1,7 +1,7 @@
 footer {
     width: 100%;
     height: auto;
-    background-color: rgb(67, 67, 67);
+    background-color: #222222;
     padding: 20px 30px;
     border-top: 5px solid rgb(45, 42, 42);
 }
@@ -17,6 +17,13 @@ footer .footerItems {
     margin: 20px 5px 0px;
 }
 
+
+footer .footerItems .footer_rightPart {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
 footer .footerItems button {
     border: none;
 }
@@ -28,7 +35,8 @@ footer .footerItems .footerLeftContents {
 
 footer .footerItems .footerLeftContents .imherestudio {
     font-size: 22px;
-    font-weight: bold;
+    color: rgb(198, 198, 198);
+    font-weight: 600;
 }
 
 footer .footerItems .footerLeftContents p {
@@ -49,6 +57,7 @@ footer .footerItems .phone {
     font-size: 35px;
 }
 
+
 .socialNetwork .telegram {
     margin-right: 14px;
     color: rgb(41, 143, 245);
@@ -60,36 +69,112 @@ footer .footerItems .phone {
 
 }
 
-.footerRegistration p {
-    color: white;
-}
 
 footer .footerRightContents {
     display: flex;
 }
 
-.footerRegistration {
+footer .footerRegistration {
     display: flex;
-    margin-top: 30px;
+}
+
+footer .footerRegistration p.footerRegistration_number {
+    color: white;
+    margin-left: -18px;
+    margin-top: 3px;
+}
+
+footer .rightFooterContent {
+    margin-top: 20px;
+}
+
+footer .rightFooterContent .mail_address {
+    color: aliceblue;
+    display: flex;
+}
+
+footer .rightFooterContent .mail_address p {
+    font-size: 18px;
+}
+
+footer .rightFooterContent .mail_address .mail_info {
+    font-size: 30px;
+}
+
+footer .rightFooterContent .mail_address .mail_info-link {
+    color: white;
+}
+
+footer .rightFooterContent .mail_address p {
+    margin-left: 15px;
+    margin-top: 2px;
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 530px) {
     footer {
         display: flex;
         flex-direction: column;
         margin: auto;
     }
 
-    .footerRegistration {
+    footer .container {
+        display: flex;
+    }
 
+    footer .footerItems .footerLeftContents .imherestudio {
+        font-size: 18px;
+    }
+
+
+    footer .footerItems p {
+        font-size: 14px;
+    }
+
+    footer .rightFooterContent .mail_address p {
+        font-size: 14px;
+    }
+
+    footer .rightFooterContent .mail_address .mail_info {
+        font-size: 22px;
+    }
+
+    .socialNetwork .telegram, .socialNetwork .whatsapp {
+        font-size: 26px;
+    }
+
+    footer .footerRegistration p.footerRegistration_number {
+        color: white;
+        margin-left: -18px;
+        margin-top: 3px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 441px) {
+    footer .footerItems .footerLeftContents .imherestudio {
+        font-size: 13px;
+        margin-bottom: 8px;
     }
 
     footer .footerItems p {
+        font-size: 11px;
+    }
+
+    footer .footerRegistration p.footerRegistration_number {
+        color: white;
+        margin-left: -18px;
+        margin-top: 3px;
+        font-size: 11px;
+    }
+
+    footer .rightFooterContent .mail_address .mail_info {
         font-size: 20px;
     }
 
-
+    .socialNetwork .telegram, .socialNetwork .whatsapp {
+        font-size: 24px;
+    }
 }
-
 

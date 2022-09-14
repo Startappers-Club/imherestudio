@@ -10,41 +10,57 @@ import img_2 from "../assets/images/2.jpg";
 import img_3 from "../assets/images/3.jpg";
 import img_4 from "../assets/images/4.jpg";
 import img_5 from "../assets/images/5.jpg";
+import img_6 from "../assets/images/6.jpg";
+import img_7 from "../assets/images/7.jpg";
 
 import "../styles/MainContainer.css";
 
 
 export default function MainContainer() {
     const userInfoList = [
-        { id: 1, name: "Norway Park: Барвиха", img: img_1, data: [
+        {id: 1, name: "ГудЛандия: Лыткарино", img: img_1, data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ]},
+        {id: 2, name: "ГудЛандия: Серпухов", img: img_2, data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ]},
+        {id: 3, name: "ГудЛандия: Жуковский", img: img_3, data: [
+            {date:"07.09.2022", link:"link_1"},
+            {date:"08.09.2022", link:"link_2"},
+            {date:"09.09.2022", link:"link_1"},
+            {date:"10.09.2022", link:"link_3"},
+            {date:"11.09.2022", link:"link_4"},
+        ]},
+        { id: 4, name: "Norway Park: Барвиха", img: img_4 ,  data: [
             {date:"07.09.2022", link:"link_1"},
             {date:"08.09.2022", link:"link_2"},
             {date:"09.09.2022", link:"link_1"},
             {date:"10.09.2022", link:"link_3"},
             {date:"11.09.2022", link:"link_4"},
         ] },
-        { id: 2, name: "Norway Park: Красногорск", img: img_2 ,  data: [
+        { id: 5, name: "Norway Park: Красногорск", img: img_5 ,  data: [
             {date:"07.09.2022", link:"link_1"},
             {date:"08.09.2022", link:"link_2"},
             {date:"09.09.2022", link:"link_1"},
             {date:"10.09.2022", link:"link_3"},
             {date:"11.09.2022", link:"link_4"},
         ] },
-        { id: 3, name: "Norway Park: Мега Дыбенко", img: img_3 ,  data: [
+        { id: 6, name: "Norway Park: Мега Дыбенко", img: img_6 ,  data: [
             {date:"07.09.2022", link:"link_1"},
             {date:"08.09.2022", link:"link_2"},
             {date:"09.09.2022", link:"link_1"},
             {date:"10.09.2022", link:"link_3"},
             {date:"11.09.2022", link:"link_4"},
         ] },
-        { id: 4, name: "Мадагаскар Junior", img: img_4 ,  data: [
-            {date:"07.09.2022", link:"link_1"},
-            {date:"08.09.2022", link:"link_2"},
-            {date:"09.09.2022", link:"link_1"},
-            {date:"10.09.2022", link:"link_3"},
-            {date:"11.09.2022", link:"link_4"},
-        ] },
-        { id: 5, name: "ГудЛандия: Жуковский", img: img_5,  data: [
+        { id: 7, name: "Мадагаскар Junior", img: img_7,  data: [
             {date:"07.09.2022", link:"link_1"},
             {date:"08.09.2022", link:"link_2"},
             {date:"09.09.2022", link:"link_1"},
@@ -52,7 +68,6 @@ export default function MainContainer() {
             {date:"11.09.2022", link:"link_4"},
         ]  }
     ];
-
 
 
     const [showModal, setShowModal] = useState(false);
@@ -104,15 +119,19 @@ export default function MainContainer() {
                                         <div className="usersData"><span>{ selectedItem?.data[dataIndex].date }</span></div>
                                         <button className="left" onClick={nextSlide}><FontAwesomeIcon icon={ faChevronRight } /></button>
                                     </div>
-                                    <Link to={ `base/${selectedItem?.data[dataIndex].link}` } className="ok">OK</Link>
+                                    <Link to={ `base/${selectedItem?.data[dataIndex].link}` } className="ok">
+                                        Редактировать
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </>
                 ) : "" }
-                <div className="row justify-content-center justify-content-md-center align-items-center">
+
+
+                <div className="row">
                     { userInfoList.map(users => (
-                        <div key={ users.id } className="col-lg-4 col-md-6 container_item">
+                        <div key={ users.id } className="container_item">
                             <UserInfo user={ users } setSelectedItemId={ setSelectedItemId } showUserMessage={ () => setShowModal(true) } />
                         </div>
                     )) }

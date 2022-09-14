@@ -19,7 +19,6 @@ import "../styles/Modal.css";
 
 export default function Header() {
       const [showState, setShowState] = useState(false);
-      console.log(showState);
 
       const showToUserHelpModal = () => {
             return setShowState(!showState)
