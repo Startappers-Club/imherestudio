@@ -26,6 +26,7 @@ export default function Header() {
 
       return (
             <>
+                  <h2>Project</h2>
                   <nav className="navbar header_content">
                         <div className="container">
                               <Link className="navbar-brand text-white" to="/">
